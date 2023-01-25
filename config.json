@@ -1,0 +1,54 @@
+{
+  "serverPort": 3000,
+  "globalRules": {
+    "excludeSenders": ["^/+55/s(87|81)"]
+  },
+  "events": {
+    "start": "onStart",
+    "error": "onError"
+  },
+  "commands": [
+    {
+      "received": ["^//ask"],
+      "command": "ask",
+      "flags": "i",
+      "rules": {
+        "excludeSenders": ["^/+55/s(87|81)"]
+      },
+      "rulesMergeMode": "remove"
+    },
+    {
+      "received": ["^//menu"],
+      "command": "menu",
+      "flags": "i"
+    },
+    {
+      "received": [
+        "https?:////(wa/.me|api/.whatsapp/.com)",
+        "^//wa"
+      ],
+      "command": "wa",
+      "flags": "i"
+    },
+    {
+      "received": [
+        "https?:////(www/.)?instagram/.com",
+        "^//inst"
+      ],
+      "command": "inst",
+      "flags": "i"
+    },
+    {
+      "received": [".*"],
+      "command": "welcome",
+      "flags": "si",
+      "rules": {
+        "includeSenders": ["^/+/d{1,3}/s"]
+      }
+    }
+  ],
+  "options": {
+    "openAiApiKey": "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",
+    "botStatus": 1
+  }
+}
