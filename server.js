@@ -10,8 +10,8 @@ const configuration = new Configuration({
 })
 const openai = new OpenAIApi(configuration)
 
-app.use(express.json())
 app.use(cors())
+app.use(express.json())
 app.post("/", async (request, response) => {
   const data = request.body
   if (/^\/ask/i.test(data?.senderMessage ?? "")) {
