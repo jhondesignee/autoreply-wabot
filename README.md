@@ -53,6 +53,12 @@ yarn install
 
 # Configuração
 
+No arquivo ".env", cole o token do OpenAI
+
+```bash
+OPENAIKEY="seu token aqui"
+```
+
 No Auto Reply, crie uma nova regra com as seguintes configurações:
 
 - responder a todas as mensagens
