@@ -10,17 +10,41 @@ Também será utilizado um app de respostas automáticas para o WhatsApp e o Ter
 
 Instale o Auto Reply pela Play Store [aqui](https://play.google.com/store/apps/details?id=com.pransuinc.autoreply)
 
-Instale o Termux pelo GitHub [aqui](https://)
+Instale o Termux pelo GitHub [aqui](https://github.com/termux/termux-app)
+
+<details>
+  <summary>Veja como configurar o Termux</summary>
+
+  <br>
+
+  - Atualize o Termux
+
+  ```bash
+  pkg upgrade
+  ```
+
+  - Instale o NodeJS e o Git
+
+  ```bash
+  pkg install nodejs-lts git
+  ```
+
+  - Instale o Yarn
+
+  ```bash
+  npm i -g yarn
+  ```
+</details>
 
 <hr>
 
-Clone esse repositório
+- Clone esse repositório
 
 ```bash
 git clone https://github.com/jhondesignee/autoreply-wabot
 ```
 
-Acesse a pasta e instale as dependências
+- Acesse a pasta e instale as dependências
 
 ```bash
 cd autoreply-wabot
