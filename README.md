@@ -53,7 +53,7 @@ yarn install
 
 # Configuração
 
-No arquivo ".env", cole o token do OpenAI
+Crie um arquivo chamado ".env" e cole o token do OpenAI
 
 ```bash
 OPENAIKEY="seu token aqui"
