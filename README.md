@@ -1,8 +1,8 @@
-# Introdução
+# AutoReply WhatsApp Bot
 
 Este é um exemplo de como usar a API OpenAI com JavaScript e de como criar um chat bot para o WhatsApp
 
-# Instalação
+## Instalação
 
 Antes de começar, você deve ter um token do OpenAI. Crie um [aqui](https://beta.openai.com/account/api-keys)
 
@@ -51,7 +51,7 @@ cd autoreply-wabot
 yarn install
 ```
 
-# Configuração
+## Configuração
 
 Crie um arquivo chamado ".env" e cole o token do OpenAI
 
