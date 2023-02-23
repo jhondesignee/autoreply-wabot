@@ -35,7 +35,7 @@ app.post("/", async (request, response) => {
       data: [{ message: result }]
     })
   } catch(error) {
-    console.log(error.response.data ?? error.message)
+    console.log(error.response?.data ?? error.message)
     response.status(500).end()
   }
 })
