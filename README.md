@@ -1,6 +1,6 @@
-# AutoReply WhatsApp Bot
+# Open AI WhatsApp Bot
 
-Este é um exemplo de como usar a API OpenAI com JavaScript e de como criar um chat bot para o WhatsApp
+Este é um exemplo de como usar a API Open AI com JavaScript e de como criar um chat bot para o WhatsApp
 
 ## Instalação
 
@@ -41,19 +41,19 @@ Instale o Termux pelo GitHub [aqui](https://github.com/termux/termux-app)
 - Clone esse repositório
 
 ```bash
-git clone https://github.com/jhondesignee/autoreply-wabot
+git clone https://github.com/jhondesignee/openai-wabot
 ```
 
 - Acesse a pasta e instale as dependências
 
 ```bash
-cd autoreply-wabot
+cd openai-wabot
 yarn install
 ```
 
 ## Configuração
 
-Crie um arquivo chamado ".env" e cole o token do OpenAI
+Crie um arquivo na raiz do projeto chamado ".env" e cole o token do Open AI
 
 ```bash
 OPENAIKEY="seu token aqui"
