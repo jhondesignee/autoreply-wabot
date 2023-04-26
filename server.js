@@ -1,14 +1,14 @@
 import express from "express"
 import cors from "cors"
-import dotenv from "dotenv"
 import { Configuration, OpenAIApi } from "openai"
+import config from "./config.json" assert { type: "json" }
 
-const app = express()
-dotenv.config()
+const app = express()	
 const configuration = new Configuration({
-  apiKey: process.env.OPENAIKEY
+  apiKey: config.openAiApiKey
 })
 const openai = new OpenAIApi(configuration)
+const serverPort = config.serverPort ?? 3000
 
 app.use(cors())
 app.use(express.json())
@@ -16,7 +16,7 @@ app.post("/", async (request, response) => {
   const data = request.body
   const isCommand = /^\/ask/i.test(data?.senderMessage ?? "")
   if (!isCommand) {
-    return response.end()
+    return response.status(204).end()
   }
   const prompt = data.senderMessage.replace("/ask", "").trim()
   if (!prompt) {
@@ -39,6 +39,6 @@ app.post("/", async (request, response) => {
     response.status(500).end()
   }
 })
-app.listen(process.env.PORT ?? 3000, () => {
-  console.log("Bot running")
+app.listen(serverPort, () => {
+  console.log(`Bot running on 'http://localhost:${serverPort}'`)
 })
