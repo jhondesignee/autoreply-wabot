@@ -48,15 +48,18 @@ git clone https://github.com/jhondesignee/openai-wabot
 
 ```bash
 cd openai-wabot
-yarn install
+yarn
 ```
 
 ## Configuração
 
-Crie um arquivo na raiz do projeto chamado ".env" e cole o token do Open AI
+No arquivo "config.json", cole o token do Open AI
 
-```bash
-OPENAIKEY="seu token aqui"
+```json
+{
+  "port": 4000,
+  "openAiApiKey": "cole aqui"
+}
 ```
 
 No Auto Reply, crie uma nova regra com as seguintes configurações:
